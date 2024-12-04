@@ -1,60 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Associate Senior Programmer</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Merriweather', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
+
         header {
             background-color: #444;
             color: white;
             padding: 20px;
             text-align: center;
         }
+
         .container {
             max-width: 900px;
             margin: auto;
             padding: 20px;
         }
+
         .section {
             margin-bottom: 40px;
         }
+
         .section h2 {
             border-bottom: 2px solid #444;
             padding-bottom: 5px;
         }
-        .contact, .social-media {
+
+        .contact,
+        .social-media {
             display: flex;
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
         }
-        .contact div, .social-media div {
+
+        .contact div,
+        .social-media div {
             margin-bottom: 10px;
         }
+
         .projects .project {
             margin-bottom: 20px;
         }
+
         .projects .project h3 {
             margin: 0;
             font-size: 1.2em;
         }
-        a {
-            color: #0066cc;
+
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .project {
+            flex: 1;
+            min-width: 280px;
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project h3 {
+            margin: 0 0 10px 0;
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .project p {
+            margin: 0 0 15px 0;
+            font-size: 0.95em;
+            color: #666;
+        }
+        
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #button {
+            color: white;
+            background-color: #444;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 0.9em;
+        }
+
+        #button:hover {
+            background-color: #0066cc;
+            text-decoration: underline;
+        }
+
+        #links {
+            color: #0080ff;
             text-decoration: none;
         }
-        a:hover {
+        #links:hover {
+            color: #0066cc;
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Portfolio of Parvezali Polra</h1>
@@ -64,25 +129,19 @@
         <!-- Summary Section -->
         <div class="section" id="summary">
             <h2>Summary</h2>
-            <p> Associate Senior Programmer with 3+ years of experience in game development and project leadership. Skilled in GameProgramming, GameDesign, and implementing DesignPatterns to create efficient, scalable systems. Proficient in debugging, performance optimization, and problem-solving, with a strong ability to enhance gameplay experiences. Known for excellent communication, adaptability, time management, and teamwork, with a proven history of delivering polished, high-quality games on schedule.</p></div>
-
-        <!-- Contact Section -->
-        <div class="section" id="contact">
-            <h2>Contact Details</h2>
-            <div class="contact">
-                <div>Email: <a href="mailto:polraparvezali@gmail.com">polraparvezali@gmail.com</a></div>
-                <div>Phone: +91 999-866-7226</div>
-                <div>Location: Gujarat, India</div>
-            </div>
+            <p> Associate Senior Programmer with 3+ years of experience in game development and project leadership.
+                Skilled in Game Programming, Game Design, and implementing Design Patterns to create efficient,
+                scalable systems. Proficient in debugging, performance optimization, and problem-solving, with a strong
+                ability to enhance gameplay experiences. Known for excellent communication, adaptability,
+                time management, and teamwork, with a proven history of delivering polished, high-quality games on
+                schedule.</p>
         </div>
 
-        <!-- Social Media Section -->
-        <div class="section" id="social-media">
-            <h2>Social Media Links</h2>
-            <div class="social-media">
-                <div><a href="https://www.linkedin.com/in/parvezali-polra/" target="_blank">LinkedIn</a></div>
-                <div><a href="https://github.com/polraparvezali" target="_blank">GitHub</a></div>
-            </div>
+        <!-- Resume Section -->
+        <div class="section" id="resume">
+            <h2>Download My Resume</h2>
+            <p>Click the button below to download my resume and learn more about my skills and experience:</p>
+            <a id="button" href="https://drive.google.com/uc?export=download&id=12aXjUMdEGip_vHIXH-2qlDpTagdV8_wd" download="Resume_Parvezali"> Download Resume</a>
         </div>
 
         <!-- Projects Section -->
@@ -90,18 +149,141 @@
             <h2>Projects</h2>
             <div class="projects">
                 <div class="project">
-                    <h3>Draw Car Park</h3>
-                    <p>A car parking game with endless and level-based modes. Available on Google Play Store.</p>
-                    <a href="https://play.google.com/store/apps/details?id=com.fuggiiandco.U.DrawCarPark" target="_blank">View Project</a>
+                    <h3>Live Operations - We Are Illuminati: Conspiracy (Android, iOS)</h3>
+                    <p>What do pop idols, freemasonry enthusiasts, world leaders and scaly-skinned aliens have in common
+                        besides money, power and cleverly disguised spaceships?
+                        They are all part of the multiverse!</p>
+                    <a id="button" href="https://play.google.com/store/apps/details?id=br.com.tapps.weareilluminati"
+                        target="_blank">View Project</a>
                 </div>
                 <div class="project">
-                    <h3>2D Puzzle Game</h3>
-                    <p>A mobile puzzle game inspired by *The Witness*, featuring dynamic puzzle creation and daily rewards.</p>
+                    <h3>Live Operations - Nanogram Logic Pic (Android, iOS)</h3>
+                    <p>Training your mind is a good way to spend your free time. Solve addictive and challenging logic
+                        puzzles and then discover amazing pixel-art illustrations,
+                        train your mind and have fun at the same time!</p>
+                    <a id="button" href="https://play.google.com/store/apps/details?id=br.com.tapps.logicpic" target="_blank">View
+                        Project</a>
                 </div>
                 <div class="project">
-                    <h3>Educational AR Game</h3>
-                    <p>Developed an AR game for kids aged 4-10 with engaging educational content.</p>
+                    <h3>Goons - Legends & Mayhem (PC, Xbox One, PS4, PS5, Nintendo Switch)</h3>
+                    <p>A frantic blend of Beat ‘em up and arcade hockey that plays like perpetual fights in various
+                        themed levels, opposing teams of heroes outfitted with unique abilities.
+                        Bonkers sports action like you’ve never seen before!</p>
+                    <a id="button" href="https://playgoons.com/" target="_blank">View Project</a>
                 </div>
+                <div class="project">
+                    <h3>Truck Driver - Heading North (PS4, Xbox)</h3>
+                    <p>Expand your Truck Driver experience with the 'Heading North' DLC! When your uncle Karl challenges
+                        you to continue your trucking career overseas in the cold,
+                        but captivating green country of Mangefjell, you decide to take on the adventure. Drive around
+                        beautiful Nordic-inspired landscapes as you continue your trucking career
+                        and complete numerous jobs for new characters.</p>
+                    <a id="button" href="https://www.soedesco.com/games/truck-driver-heading-north" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Lacuna - A Sci-Fi Noir Adventure (PS4, Xbox, Nintendo Switch, Android, iOS)</h3>
+                    <p>A murder. A hack. A bombing. All it takes to plunge the solar system into war – unless you do
+                        something about it. Help CDI agent Neil Conrad make a string of increasingly
+                        difficult decisions in this modern dialog-driven adventure set in a gorgeous 2D sci-fi noir
+                        universe.</p>
+                    <a id="button" href="https://store.steampowered.com/app/1364100/Lacuna__A_SciFi_Noir_Adventure/"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Among the Sleep - Enhanced Edition (Nintendo Switch)</h3>
+                    <p>In the nightmarish first-person horror game Among the Sleep, you play as a defenseless toddler,
+                        roaming around the house to find your missing mom.</p>
+                    <a id="button" href="https://www.nintendo.com/us/store/products/among-the-sleep-enhanced-edition-switch/"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Card Dice Games (Android, iOS)</h3>
+                    <p>Don’t you think playing cards and dice games is one of the best entertainment when you are with
+                        your friends and family? Whether you are a beginner or a pro-level gamer,
+                        card and dice games offer something for everyone. It encompasses designing mechanics, crafting
+                        artwork, implementing rules, testing balance, and optimizing gameplay.
+                        It involves creating captivating card designs and intricate dice artwork, ensuring visual appeal
+                        and functionality.</p>
+                    <a id="button" href="https://hashbytestudio.com/our-games/card-dice-games/" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>SmartXR Kids - Learning App (Android)</h3>
+                    <p>The SmartXR Ecosystem is a seamless integration of SmartXR classroom and SmartXR kids.</p>
+                    <a id="button" href="https://www.smartxr.in/" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>AR Zombie Shooter (Android) - Available on Google Play Store.</h3>
+                    <p>Zombie AR Shooter - The Ultimate Augmented Reality Zombie Experience!</p>
+                    <a id="button" href="https://play.google.com/store/apps/details?id=com.fuggiiandco.ARZombieShooter"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Draw Car Park (Android) - Available on Google Play Store.</h3>
+                    <p>Get ready to dive into the most addictive and satisfying car parking game on mobile! Draw Car
+                        Park challenges you to guide cars to their designated parking spots
+                        with a simple swipe of your finger. But it's not as easy as it sounds—each car has a specific
+                        color, and so does its matching parking spot!</p>
+                    <a id="button" href="https://play.google.com/store/apps/details?id=com.fuggiiandco.U.DrawCarPark"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Fun Match - Bottle Blitz (Android) - Available on Google Play Store.</h3>
+                    <p>Solve the bottle sequence puzzle with the help of match count i.e. how many bottles matching with
+                        sequence.</p>
+                    <a id="button" href="https://play.google.com/store/apps/details?id=com.VeryGoodGames.U.FunMatch"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Feared Monkey (WebGL)</h3>
+                    <p>A monkey running away from a machine that is destroying his home i.e. forest. Climb through the
+                        tree to save yourself.</p>
+                    <a id="button" href="https://belovedparvez.itch.io/fearedmonkey" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Run Corona (Windows)</h3>
+                    <p>You are containing the virus and running to protect yourself from police and doctors. Civilians
+                        are trying to protect themselves to not get infected by virus.</p>
+                    <a id="button" href="https://belovedparvez.itch.io/runcorona" target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>Bollywood Remastered (Android)</h3>
+                    <p>Guess the bollywood movie game.</p>
+                    <a id="button" href="https://drive.google.com/drive/folders/1fJRJlIdxBE7GA9Am-KBgZqlke8NLRF2M"
+                        target="_blank">View Project</a>
+                </div>
+                <div class="project">
+                    <h3>AK Masters - Multiplayer FPS (Windows)</h3>
+                    <p>Muliplayer FPS Game</p>
+                    <a id="button" href="https://drive.google.com/drive/folders/1Mo-38bHfFvqZqaoVXroyUgE2h-f25i0f?usp=sharing"
+                        target="_blank">View Project</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Other Projects Section -->
+        <div class="other-projects">
+            <h2>Other Projects</h2>
+            <p>Explore more of my work by visiting the following link:</p>
+            <a id="button" href="https://drive.google.com/drive/folders/1WcNmFKp1Twpy_I8CfIcM03nsJLnlOLxn?usp=sharing"> Other Projects </a>
+        </div>
+
+        <!-- Social Media Section -->
+        <div class="section" id="social-media">
+            <h2>Social Media Links</h2>
+            <div class="social-media">
+                <div><a id="links" href="https://www.linkedin.com/in/parvezali-polra/" target="_blank">LinkedIn</a></div>
+                <div><a id="links" href="https://belovedparvez.itch.io/" target="_blank">Itch.io</a></div>
+                <div><a id="links" href="https://github.com/polraparvezali" target="_blank">GitHub</a></div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section" id="contact">
+            <h2>Contact Details</h2>
+            <div class="contact">
+                <div>Email: <a id="links" href="mailto:polraparvezali@gmail.com">polraparvezali@gmail.com</a></div>
+                <div>Phone: +91 999-866-7226</div>
+                <div>Location: Gujarat, India</div>
             </div>
         </div>
     </div>
